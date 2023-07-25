@@ -1,14 +1,24 @@
 const palindromes = function (str) {
-    let indexEnd = str.length - 1
+    console.log(str)
     let indexStart = 0
-    while( indexStart < indexEnd){
+    let indexEnd = str.length - 1
+
+    console.log(str[indexStart])
+    console.log(str[indexEnd])
+
+    if(indexStart < indexEnd){
         if(str[indexStart++] != str[indexEnd--]) {
             return false
+        } else {
+            palindromes(str.slice(indexStart, indexEnd + 1))
         } 
-    }    
-    return true
+    } else {
+        return true
+    }   
 };
 
-console.log(palindromes("AramkrA"))
+let str = 'AramakrA'
+
+console.log(palindromes(str))
 // Do not edit below this line
 module.exports = palindromes;
