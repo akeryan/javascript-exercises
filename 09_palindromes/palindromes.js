@@ -29,11 +29,5 @@ function isValidChar(a) {
     return false
 }
 
-let str = 'A car, a man, a maraca.'
-
-console.log(palindromes(str))
-
-
-
 // Do not edit below this line
 module.exports = palindromes;
